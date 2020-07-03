@@ -11,8 +11,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class StudentServiceImpl implements StudentService {
     @Override
-    public Student query(String uid) {
+    public Student query(String uid, String password) {
         // 模拟查询db
-        return new Student("123", "zhx");
+        String name = "Tom";
+        return Student.builder()
+                .name(name)
+                .uid(uid)
+                .password(password)
+                .build();
     }
 }

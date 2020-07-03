@@ -11,7 +11,8 @@ public interface StudentService {
      * 根据id查询学生信息
      *
      * @param uid
+     * @param password
      * @return
      */
-    Student query(String uid);
+    Student query(String uid, String password);
 }

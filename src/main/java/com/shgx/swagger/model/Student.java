@@ -1,39 +1,21 @@
 package com.shgx.swagger.model;
 
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
+import lombok.Data;
+
 /**
  * @author: guangxush
  * @create: 2020/07/03
  */
+@Data
+@Builder
 public class Student {
+
+    @ApiModelProperty(value = "defaultStr", required = true)
     private String uid;
+    @ApiModelProperty(value = "defaultStr", example = "Tom")
     private String name;
-
-    public Student(String uid, String name) {
-        this.uid = uid;
-        this.name = name;
-    }
-
-    public String getUid() {
-        return uid;
-    }
-
-    public void setUid(String uid) {
-        this.uid = uid;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "uid='" + uid + '\'' +
-                ", name='" + name + '\'' +
-                '}';
-    }
+    @ApiModelProperty(value = "defaultStr", example = "123456")
+    private String password;
 }
