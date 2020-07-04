@@ -90,17 +90,24 @@ public class SwaggerApplication {
 
 http://localhost:8080/swagger-ui.html
 
+打开文档，选择待测试的接口
 
 ### Swagger注解说明
 
+官方文档：https://editor.swagger.io/
+
+打开待测试的文档，选择测试接口
+![](assets/README-c0add448.png)
+可以看到对应的参数信息，点击Try It Out
+![](assets/README-4fff36ac.png)
+输入参数，点击执行
+![](assets/README-dcf16031.png)
+下方可以看到执行结果
+![](assets/README-71cb740e.png)
 - @Api：用在类上，说明该类的作用。
-
 - @ApiOperation：给API增加方法说明。
-
 - @ApiImplicitParams : 用在方法上包含多个参数说明。
-
 - @ApiImplicitParam：用在方法上包含一个参数说明。
-
 ```text
 paramType：指定参数放在哪个地方。
 name：参数名
@@ -110,9 +117,7 @@ value：说明参数
 defaultValue：参数的默认值
 ```
 注：paramType类型
-
 ```text
- 
 header：请求参数放置于Request Header，使用@RequestHeader 获取。
 query：请求参数放置于请求地址，使用@RequestParam获取
 path：用于restful接口。
@@ -121,15 +126,11 @@ body
 form
 ```
 - @ApiResponses：用于表示一组响应。
-
 - @ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息。
 ```text
-
 code：数字，例如400
 message：信息，例如"请求参数没填好"。
 response：抛出异常的类
 ```
-
 - @ApiModel：描述一个Model的信息（一般用在请求参数无法使用@ApiImplicitParam注解进行描述的时候）。
-
 - @ApiModelProperty：描述一个model的属性。
