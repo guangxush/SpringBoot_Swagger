@@ -9,6 +9,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @author: guangxush
  * @create: 2020/07/03
@@ -29,6 +31,14 @@ public class StudentController {
     @ResponseBody()
     public Student login(Long userId, String password){
         return studentService.login(userId, password);
+    }
+
+
+    @ApiOperation(value = "查询所有学生")
+    @GetMapping("/students") // restful不要使用动词，注意名次单复数，不要使用/getAllStudents
+    @ResponseBody()
+    public List<Student> getAllStudents(){
+        return studentService.queryAll();
     }
 
 }

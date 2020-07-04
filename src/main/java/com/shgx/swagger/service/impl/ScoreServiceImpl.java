@@ -14,4 +14,12 @@ public class ScoreServiceImpl implements ScoreService {
     public Score query(Long courseId, Long uid) {
         return Score.builder().courseId(courseId).uid(uid).score(95).build();
     }
+
+    @Override
+    public Score update(Long courseId, Long uid) {
+        // 模拟query
+        Score score = Score.builder().courseId(courseId).uid(uid).score(100).build();
+        // 模拟update
+        return score;
+    }
 }

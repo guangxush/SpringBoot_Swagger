@@ -15,4 +15,12 @@ public interface ScoreService {
      * @return
      */
     Score query(Long courseId, Long uid);
+
+    /**
+     * 修改成绩
+     * @param courseId
+     * @param uid
+     * @return
+     */
+    Score update(Long courseId, Long uid);
 }

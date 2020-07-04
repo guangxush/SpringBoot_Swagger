@@ -32,4 +32,13 @@ public class ScoreController {
     public Score login(@PathVariable Long userId,@PathVariable Long courseId){
         return scoreService.query(userId, courseId);
     }
+
+    @ApiOperation(value = "更新成绩")
+    @ApiImplicitParams({@ApiImplicitParam(name = "userId", value = "学号", required = true, dataType = "Long"),
+            @ApiImplicitParam(name = "courseId", value = "课程ID", required = true, dataType = "Long")})
+    @PutMapping("/update/{userId}/{courseId}")
+    @ResponseBody()
+    public Score updateScore(@PathVariable Long userId,@PathVariable Long courseId){
+        return scoreService.update(userId, courseId);
+    }
 }
