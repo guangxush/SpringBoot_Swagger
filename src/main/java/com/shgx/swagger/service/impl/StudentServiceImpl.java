@@ -5,7 +5,9 @@ import com.shgx.swagger.service.StudentService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author: guangxush
@@ -45,5 +47,16 @@ public class StudentServiceImpl implements StudentService {
                 .build());
         return students;
     }
+
+    @Override
+    public Map<Long, Boolean> deleteAll(List<Long> userIds) {
+        Map<Long, Boolean> deleteResult = new HashMap<>(userIds.size());
+        for(Long uid: userIds){
+            // 模拟删除成功
+            deleteResult.put(uid, true);
+        }
+        return deleteResult;
+    }
+
 
 }
