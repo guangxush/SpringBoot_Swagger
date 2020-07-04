@@ -13,7 +13,7 @@ import lombok.Data;
 public class Student {
 
     @ApiModelProperty(value = "defaultStr", required = true)
-    private String uid;
+    private Long uid;
     @ApiModelProperty(value = "defaultStr", example = "Tom")
     private String name;
     @ApiModelProperty(value = "defaultStr", example = "123456")

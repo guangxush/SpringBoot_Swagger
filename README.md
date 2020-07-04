@@ -88,7 +88,9 @@ public class SwaggerApplication {
 
 ### 5. 运行并访问如下链接, 即可进行查看和测试
 
-http://localhost:8080/swagger-ui.html
+http://localhost:8080/stable/swagger-ui.html
+
+stable表示版本号，配置方式在application.yml里面
 
 打开文档，选择待测试的接口
 

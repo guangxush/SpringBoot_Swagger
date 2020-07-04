@@ -23,12 +23,12 @@ public class StudentController {
     private StudentService studentService;
 
     @ApiOperation(value = "登录")
-    @ApiImplicitParams({@ApiImplicitParam(name = "userId", value = "用户名", required = true, dataType = "String"),
+    @ApiImplicitParams({@ApiImplicitParam(name = "userId", value = "用户名", required = true, dataType = "Long"),
             @ApiImplicitParam(name = "password", value = "密码", required = true, dataType = "String")})
     @PostMapping("/login")
     @ResponseBody()
-    public Student login(String userId, String password){
-        return studentService.query(userId, password);
+    public Student login(Long userId, String password){
+        return studentService.login(userId, password);
     }
 
 }

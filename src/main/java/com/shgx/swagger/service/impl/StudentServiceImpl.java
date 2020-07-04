@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class StudentServiceImpl implements StudentService {
     @Override
-    public Student query(String uid, String password) {
-        // 模拟查询db
+    public Student login(Long uid, String password) {
+        // 模拟查询db 直接返回true
         String name = "Tom";
         return Student.builder()
                 .name(name)

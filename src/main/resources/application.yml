@@ -1,0 +1,7 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /stable
+    multipart:
+      max-file-size: 20M
+      max-request-size: 20M

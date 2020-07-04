@@ -8,11 +8,11 @@ import com.shgx.swagger.model.Student;
  */
 public interface StudentService {
     /**
-     * 根据id查询学生信息
+     * 登录
      *
      * @param uid
      * @param password
      * @return
      */
-    Student query(String uid, String password);
+    Student login(Long uid, String password);
 }
